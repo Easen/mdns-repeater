@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  mdns-repeater:
+    image: ghcr.io/easen/mdns-repeater:main
+    container_name: mdns-repeater
+    restart: unless-stopped
+    environment:
+      INTERFACES: "eth0 eth0.10 eth0.20 eth0.30"
+    network_mode: "host"
